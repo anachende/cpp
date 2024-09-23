@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//gasire divizori primi si puterea la care sunt acestia
 void divizori_primi(int nr) {
 	int i;
 	int p = 0;
@@ -26,23 +26,23 @@ void divizori_primi(int nr) {
 
 int main() {
 	int n,m, pr;
-	
+
 	//preluare date de la tastatura
 	//cout << "n = ";
 	//cin >> n;
-	
+
 	n = 16500;
 	m = 10780;
 	pr = 10781;
-	
+
 	cout << "divizori " << n << endl;
 	divizori_primi(n);
-	
+
 	cout << "divizori " << m << endl;
 	divizori_primi(m);
-	
+
 	cout << "divizori " << pr << endl;
 	divizori_primi(pr);
-	
+
 	return 0;
 }
