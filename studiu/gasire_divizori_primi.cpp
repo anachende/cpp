@@ -7,7 +7,7 @@ void divizori_primi(int nr) {
 	int d = 2;
 	while(nr > 1) {
 		if(nr%d == 0) {
-			p += 1;
+			p += 1; //p = p + 1
 			nr = nr/d;
 			//cout << "nr = " << nr << " d = " <<d<<endl;
 		} else {
