@@ -20,6 +20,7 @@
 1. Problema cu prima cifra si sortare vector. Nu am facut partea cu fisier
 
 ## teme_2024_09_25
-1. Subiectul 7 din: [DocumenteCuProbleme/Programare MI intensiv.pdf](./DocumenteCuProbleme/Programare-MI-intensiv.pdf)
+1. Subiectul 7 din: [DocumenteCuProbleme/Programare MI intensiv.pdf](DocumenteCuProbleme/Programare%20MI%20intensiv.pdf)
+
 
 
