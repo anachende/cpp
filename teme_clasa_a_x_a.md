@@ -16,5 +16,11 @@
 
 1. ![tema_2024_09_22_v10](https://github.com/user-attachments/assets/437d4386-ebb7-4d62-8578-b33c43e0efa0)
 
+## teme_2024_09_24
+1. Problema cu prima cifra si sortare vector. Nu am facut partea cu fisier
+
+## teme_2024_09_25
+1. Subiectul 7 din: [DocumenteCuProbleme/Programare MI intensiv.pdf](DocumenteCuProbleme/Programare%20MI%20intensiv.pdf)
+
 
 
