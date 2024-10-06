@@ -23,7 +23,7 @@ int main() {
     cin >> n;
     for (c = 0; c <= 9; c++) {
         cnt = gaseste_cifre(n, c);
-        
+
         nr_ap_cifre = nr_ap_cifre * 10 + cnt;
     }
     cout << nr_ap_cifre << endl;
