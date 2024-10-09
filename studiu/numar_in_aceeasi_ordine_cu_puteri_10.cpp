@@ -21,6 +21,7 @@ int main() {
 
         cout << "d initial:   " << d << endl;
         cout << "uc*10 la p:  " << uc*pow(10, p) << endl;
+        
         d = d + uc*pow(10, p);
         cout << " d calculat: " << d << endl;
         p++;
