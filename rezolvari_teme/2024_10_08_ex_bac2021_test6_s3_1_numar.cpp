@@ -12,22 +12,44 @@ dacă n=55 și c=5, după apel m=-1.
 #include <iostream>
 using namespace std;
 
-int numar(int n, int c, int & m) {
+void numar(int n, int c, int &m) {
     int u, uc;
-    int nr_nou = 0;
-    int nr;
-    while (nr > 0) {
-        uc = nr % 10;
-        nr = nr / 10;
+    int nr_ogl = 0;
+    int minus_1 = 1; // de returnat -1 daca toate cifrele sunt c
+
+    while (n > 0) {
+        uc = n % 10;
+        n = n / 10;
+        if(uc != c) {
+            minus_1 = 0;
+        }
         if (uc != c && uc != 0) {
-            nr_nou = nr_nou*10 + uc;
+            nr_ogl = nr_ogl*10 + uc;
         }
     }
+    //exista si varianta de construire directa, cu puteri ale lui 10
 
+    //ogllndim numarul pentru a-l obtine in forma directa
+
+    if(minus_1 == 1) {
+        m = -1;
+    } else {
+        while(nr_ogl > 0) {
+            uc = nr_ogl % 10;
+            nr_ogl = nr_ogl / 10;
+            m = m *10 + uc;
+        }
+    }
 }
 
 int main() {
     int n = 50752;
-    cout << n << " numar: " << numar(n, c, m);
+    //n = 72;
+    //n = 500;
+    //n = 55;
+    int c = 5;
+    int nr_nou = 0;
+    numar(n, c, nr_nou);
+    cout << " numar initial: " << n << ", rezultat dupa eliminare: " << nr_nou;
     return 0;
 }
