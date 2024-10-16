@@ -8,16 +8,13 @@ Scrieți definiția completă a subprogramului.
 Exemplu: dacă n=10780, atunci, în urma apelului, d=7 şi p=2 (10780=2^2*5^1*7^2*11^1)
 */
 
-
-
-
 #include <iostream>
 using namespace std;
 
 //trebuie sa gasim divizorul prim la puterea cea mai mare
 //voi furniza divizoul care are puterrea cea mai impare switch
 //si aceasta putere
-void putere(int n, int &d, int &p) {
+void putere(long long n, int &d, int &p) {
     int divizor = 2;
     int putere = 0;
 
@@ -42,12 +39,17 @@ void putere(int n, int &d, int &p) {
 }
 
 int main() {
-    int nr = 10780;
+    long long nr = 10780;
     int div;
+    //ifstream fin("fisier.in")
+    //ofstream fout("fisier.out")
     int pt;
     cout << "Divizorii primi pentru: " << nr << endl;
     putere(nr, div, pt);
     cout << endl;
     cout << "Divizorul cel mai mare la puterea cea mai mare: " << div << "^" << pt << endl;
+
+    //fin.close();
+    //fout.close();
     return 0;
 }
