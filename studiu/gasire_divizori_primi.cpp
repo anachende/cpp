@@ -11,6 +11,17 @@ Scrieți definiția completă a subprogramului.
 Exemplu: dacă n=16500 și m=10780, atunci subprogramul returnează 2 (16500=2235311,
 10780=2257211)
 
+exemplu:
+
+144 | 2
+ 72 | 2
+ 36 | 2
+ 18 | 2
+  9 | 3
+  3 | 3
+  1 |
+
+144 = 2^4 * 3^2
 */
 
 
