@@ -1,11 +1,11 @@
 /*
 Într-un text cu cel mult 100 de caractere, cuvintele sunt formate din litere mici ale alfabetului englez și
 sunt separate prin câte un spațiu. Scrieți un program C/C++ care citește de la tastatură un text de tipul
-menționat și afișează pe ecran, pe linii separate, toate cuvintele sale pentru care numărul de vocale
-este strict mai mic decât numărul de consoane. Dacă nu există niciun astfel de cuvânt, se afișează pe
-ecran mesajul nu exista. Se consideră vocale literele din mulțimea a, e, i, o, u.
-Exemplu: pentru textul ei au plantat tamarix ea a adus iasomie
-se afișează pe ecran, nu neapărat în această ordine, cuvintele alăturate. 
+menționat și afișează pe ecran numărul de cuvinte ale sale formate dintr-un număr egal de vocale și
+consoane. Se consideră vocale literele din mulțimea a, e, i, o, u.
+Exemplu: pentru textul
+cuvantul consoane are un numar de patru vocale si patru consoane
+se afișează pe ecran 6.
 */
 
 #include <iostream>
@@ -38,14 +38,16 @@ int main() {
                 contor_consoane++;
             }
         }
-        if(contor_vocale < contor_consoane) {
+        if(contor_vocale == contor_consoane) {
             contor_cuv++;
-            cout << cuv << endl;
+            //cout << cuv << endl;
         }
         cuv = strtok('\0', " ");
     }
     if(contor_cuv == 0) {
         cout << "nu exista";
+    } else {
+        cout << contor_cuv;
     }
 
     return 0;
