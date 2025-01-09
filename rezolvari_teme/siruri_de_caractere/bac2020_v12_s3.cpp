@@ -13,46 +13,28 @@ se obține textul cuvantul ritm poate fi trads rhythm
 using namespace std;
 int main() {
     char text[100];
-    char text_final[100] = "";
-    char ultima_litera_c1;
-    char ultima_litera_c2;
     char vocale[] = "aeiou";
-    char *cuv;
-    int l_text_final;
-    int contor = 0;
+    int i, contor = 0, gasit_vocala = 0;
 
     cin.get(text, 100, '\n');
-    cuv = strtok(text, " ");
-    ultima_litera_c1 = cuv[strlen(cuv) -1];
-    //cout << ultima_litera_c1 << endl;
-    strcpy(text_final, cuv);
 
-    while(cuv != '\0') {
-        cuv = strtok('\0', " ");
-        if(cuv != '\0') {
-            ultima_litera_c2 = cuv[strlen(cuv) -1];
-            //cout << ultima_litera_c2 << endl;
-
-            if(ultima_litera_c1 == ultima_litera_c2) {
-                l_text_final = strlen(text_final);
-                //strcpy(&text_final[l_text_final], " succes");
-                contor++;
-                //cout << "*2. Text final cu succes: " << text_final << endl;
-            }
-
-            l_text_final = strlen(text_final);
-            strcpy(&text_final[l_text_final], " ");
-            strcpy(&text_final[l_text_final + 1], cuv);
-
-            //cout << "*3. Text final wile: " << text_final << endl;
-            ultima_litera_c1 = ultima_litera_c2;
+    i = strlen(text) - 1;
+    while(gasit_vocala == 0) {
+        if(strchr(vocale, text[i]) != NULL) {
+            gasit_vocala = 1;
+            contor = 1;
+            cout << "pozitia: " << i << ", vocala: " << text[i] << endl;
+        } else {
+            i--;
         }
     }
+
+    strcpy(&text[i], &text[i+1]);
 
     if(contor == 0) {
         cout << "nu exista";
     } else {
-        cout << text_final;
+        cout << text;
     }
     //cout << "SALUT" << endl;
 
