@@ -24,14 +24,14 @@ int main() {
     cin.get(text, 100, '\n');
     cuv = strtok(text, " ");
     ultima_litera_c1 = cuv[strlen(cuv) -1];
-    //cout << ultima_litera_c1 << endl;
+    cout << ultima_litera_c1 << endl;
     strcpy(text_final, cuv);
 
     while(cuv != '\0') {
         cuv = strtok('\0', " ");
         if(cuv != '\0') {
             ultima_litera_c2 = cuv[strlen(cuv) -1];
-            //cout << ultima_litera_c2 << endl;
+            cout << ultima_litera_c2 << endl;
             if(ultima_litera_c1 == ultima_litera_c2) {
                 l_text_final = strlen(text_final);
                 strcpy(&text_final[l_text_final], " succes");
