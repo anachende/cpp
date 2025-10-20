@@ -66,28 +66,23 @@ int verifica_prime(int n1, int n2) {
     cout << cmmdc(og1, og2) << endl;
 
     if(cmmdc(n1, n2) == 1 && cmmdc(og1, og2) == 1) {
-        sunt_prime = 1;
-    }
-
-
-    if(sunt_prime == 1) {
         //cout << n1 << " " << n2 << " suma = " << n1+n2 << endl;
         c = n1 + n2;
     }
     return c;
 }
 int main(){
-    int n1, n2, c, cog;
+    int n1, n2, c = 0, sm_prime;
     while(n1 != 0 || n2 != 0) {
         cout << "n1 = ";
         cin >> n1;
         cout << "n2 = ";
         cin >> n2;
         if(n1 != 0 && n2 != 0) {
-            c = verifica_prime(n1, n2);
-            if(c != 0)
-                cout << c << endl;
+            sm_prime = verifica_prime(n1, n2);
+            c = c + sm_prime;
         }
     }
+    cout << c << endl;
     return 0;
 }
